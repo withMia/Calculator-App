@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+:root {
+  /* theme1 */
+  /* bg */
+  --Very-dark-desaturated-blue-main: hsl(222, 26%, 31%);
+  --Very-dark-desaturated-blue-keypad: hsl(223, 31%, 20%);
+  --Very-dark-desaturated-screen: hsl(224, 36%, 15%);
+  /* keys bg */
+  --Desaturated-dark-blue-key: hsl(225, 21%, 49%);
+  --Desaturated-dark-blue-key-shadow: hsl(224, 28%, 35%);
+  --Red-key: hsl(6, 63%, 50%);
+  --Dark-red-key-shadow: hsl(6, 70%, 34%);
+  --Light-grayish-orange-key-background: hsl(30, 25%, 89%);
+  --Grayish-orange-key-shadow: hsl(28, 16%, 65%);
+  /* text */
+  --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --White: hsl(0, 0%, 100%);
+
+  /* theme2 */
+  --Light-gray-main: hsl(0, 0%, 90%);
+  --Grayish-red-keypad: hsl(0, 5%, 81%);
+  --Very-light-gray-screen: hsl(0, 0%, 93%);
+
+  --Dark-moderate-cyan-key: hsl(185, 42%, 37%);
+  --Very-dark-cyan-key-shadow: hsl(185, 58%, 25%);
+
+  --Orange-key: hsl(25, 98%, 40%);
+  --Dark-orange-key: hsl(25, 99%, 27%);
+
+  --Light-grayish-yellow-key: hsl(45, 7%, 89%);
+  --Dark-grayish-orange-key-shadow: hsl(35, 11%, 61%);
+
+  --Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+  /* --White: hsl(0, 0, 100%); */
+
+  /*Theme 3*/
+  --Very-dark--violet-main: hsl(268, 75%, 9%);
+  --Very-dark-violet-keypad: hsl(268, 71%, 12%);
+
+  --Dark-violet-key: hsl(281, 89%, 26%);
+  --Vivid-magenta-key-shadow: hsl(285, 91%, 52%);
+
+  --Pure-cyan-key: hsl(176, 100%, 44%);
+  --Soft-cyan-key-shadow: hsl(177, 92%, 70%);
+
+  --Very-dark-violet-key: hsl(268, 47%, 21%);
+  --Dark-magenta-key-shadow: hsl(290, 70%, 36%);
+
+  --Light-yellow: hsl(52, 100%, 62%);
+  --Very-dark-blue: hsl(198, 20%, 13%);
+  /* --White (text): hsl(0, 0, 100%) */
+}
+
+* {
+  font-family: "League Spartan", sans-serif;
+  font-size: 32px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+body {
+  background-color: var(--Very-dark-desaturated-blue-main);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc {
+  text-align: center;
+  height: 700px;
+  margin: 30px;
+  width: 540px;
+  min-width: 375px;
+  max-width: 1440px;
+}
+
+.calc-header {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.calc-header h3 {
+  color: var(--White);
+}
+
+.calc-header .theme-titles {
+  text-align: end;
+}
+
+.calc-header span {
+  color: var(--White);
+  padding: 7px;
+  font-size: 18px;
+}
+
+.calc-header .them-switch .switch-container {
+  display: flex;
+  justify-content: space-between;
+  width: 140px;
+  align-items: center;
+}
+
+.calc-header .switch__buttons {
+  background-color: var(--Very-dark-desaturated-blue-keypad);
+  border-radius: 15px;
+  width: 70px;
+  height: 25px;
+  position: relative;
+  cursor: pointer;
+}
+
+.calc-header .them-switch .switch-container .switch__buttons .theme-link {
+  transition: smooth;
+  position: absolute;
+  top: 3px;
+  width: 18px;
+  height: 18px;
+}
+
+.chosen-theme {
+  background-color: var(--Red-key);
+  border-radius: 50%;
+}
+
+.calc-header .them-switch .switch-container .switch__buttons #themeOne {
+  left: 3px;
+}
+
+.calc-header .them-switch .switch-container .switch__buttons #themeTwo {
+  left: 25px;
+}
+.calc-header .them-switch .switch-container .switch__buttons #themeThree {
+  left: 47px;
+}
+
+.calc-screen {
+  margin-top: 20px;
+  height: 130px;
+  background-color: var(--Very-dark-desaturated-screen);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-all;
+}
+
+.calc-screen .result {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: var(--White);
+  font-size: 48px;
+  padding: 10px;
+}
+.cal-buttons {
+  margin: 24px 0;
+  padding: 30px 0;
+  background-color: var(--Very-dark-desaturated-blue-keypad);
+  border-radius: 12px;
+}
+
+.cal-buttons .row {
+  display: flex;
+  height: 70px;
+}
+
+.cal-buttons .row button {
+  margin: 10px 15px;
+  flex: 1 1 100px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.cal-buttons .row .evalution {
+  background-color: var(--Light-grayish-orange-key-background);
+  box-shadow: 0px 4px 0px var(--Grayish-orange-key-shadow);
+  color: var(--Very-dark-grayish-blue);
+}
+
+.cal-buttons .row .reset,
+.cal-buttons .row .delete {
+  background-color: var(--Desaturated-dark-blue-key);
+  box-shadow: 0px 4px 0px var(--Desaturated-dark-blue-key-shadow);
+  color: var(--White);
+}
+
+.cal-buttons .row .equal {
+  background-color: var(--Red-key);
+  box-shadow: 0px 4px 0px var(--Dark-red-key-shadow);
+  color: var(--White);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* change Theme */
+
+/* second theme */
+body.second-theme {
+  background-color: var(--Light-gray-main);
+}
+body.second-theme .calc-header .switch__buttons {
+  background-color: var(--Grayish-red-keypad);
+}
+
+body.second-theme .calc-header span,
+body.second-theme .calc-header h3,
+body.second-theme .calc-screen .result {
+  color: var(--Very-dark-grayish-yellow);
+}
+
+body.second-theme .cal-buttons {
+  background-color: var(--Grayish-red-keypad);
+}
+
+body.second-theme .calc-screen {
+  background-color: var(--Very-light-gray-screen);
+}
+
+body.second-theme .cal-buttons .row .reset,
+body.second-theme .cal-buttons .row .delete {
+  background-color: var(--Dark-moderate-cyan-key);
+  box-shadow: 0px 4px 0px var(--Very-dark-cyan-key-shadow);
+  color: var(--White);
+}
+
+body.second-theme .cal-buttons .row .equal {
+  background-color: var(--Orange-key);
+  box-shadow: 0px 4px 0px var(--Dark-orange-key);
+}
+
+body.second-theme .cal-buttons .row .evalution {
+  background-color: var(--Light-grayish-yellow-key);
+  box-shadow: 0px 4px 0px var(--Dark-grayish-orange-key-shadow);
+  color: var(--Very-dark-grayish-yellow);
+}
+
+/* Third theme */
+body.third-theme {
+  background-color: var(--Very-dark--violet-main);
+}
+body.third-theme .calc-header .switch__buttons {
+  background-color: var(--Very-dark-violet-keypad);
+}
+
+body.third-theme .chosen-theme {
+  background-color: var(--Pure-cyan-key);
+}
+
+body.third-theme .calc-header span,
+body.third-theme .calc-header h3,
+body.third-theme .calc-screen .result {
+  color: var(--Light-yellow);
+}
+body.third-theme .calc-screen {
+  background-color: var(--Very-dark-violet-keypad);
+}
+
+body.third-theme .cal-buttons {
+  background-color: var(--Very-dark-violet-keypad);
+}
+body.third-theme .cal-buttons .row .reset,
+body.third-theme .cal-buttons .row .delete {
+  background-color: var(--Dark-violet-key);
+  box-shadow: 0px 4px 0px var(--Vivid-magenta-key-shadow);
+  color: var(--White);
+}
+
+body.third-theme .cal-buttons .row .equal {
+  background-color: var(--Pure-cyan-key);
+  box-shadow: 0px 4px 0px var(--Soft-cyan-key-shadow);
+  color: var(--Very-dark-blue);
+}
+
+body.third-theme .cal-buttons .row .evalution {
+  background-color: var(--Very-dark-violet-key);
+  box-shadow: 0px 4px 0px var(--Dark-magenta-key-shadow);
+  color: var(--Light-yellow);
+}
