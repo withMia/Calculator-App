@@ -60,6 +60,7 @@
   text-decoration: none;
   outline: none;
   border: none;
+  caret-color: transparent;
 }
 
 body {
